@@ -1,3 +1,6 @@
+_site
+.sass-cache
+.jekyll-metadata
 *.gem
 *.rbc
 /.config
@@ -18,4 +21,4 @@
 /lib/bundler/man/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
-.rvmrc
+.RVMRC
