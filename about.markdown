@@ -4,15 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Welcome to 757btc.org, a place for delving into the world of Bitcoin, Nostr and Freedom Tech in the Hampton Roads region of Virginia! Founded by a group of dedicated Bitcoin enthusiasts, our community is committed to providing education, fostering collaboration, and creating a space for like-minded individuals to connect.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+We are focused exclusively on the transformative power of Bitcoin, not crypto, altcoins or NFTs. Our meetups offer a welcoming environment for learning and sharing knowledge. From introductory workshops to in-depth discussions on the latest developments in the Bitcoin space, our events cater to a diverse audience eager to navigate the rapidly evolving landscape of decentralized, distributed technologies.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Join us at 757btc.org to connect with fellow Bitcoin enthusiasts, stay informed about the latest trends and innovations in the space, and contribute to the growing dialogue on the future of money. Together, we're building a community that embraces the potential of Freedom Tech and fosters a deeper understanding of the decentralized revolution. We proudly support Bitcoin and welcome enthusiasts who share our passion for this groundbreaking digital currency.
 
-
-[jekyll-organization]: https://github.com/jekyll
+![Sic semper tyrannis](/assets/img/757btc-seal.jpg)

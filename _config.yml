@@ -13,20 +13,26 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 757 Bitcoin
+title: 757btc.org
 email: 757btc@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Collaborating and educating on Bitcoin, Nostr and Freedom Tech in Hampton Roads Virginia
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.757btc.org" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
 github_username:  757btc
-
+header_feature_image: assets/img/mermaid-bg.png
+header_feature_image_responsive: true
+header_text: Collaborating and Educating on Bitcoin, Nostr and Freedom Tech in Hampton Roads Virginia
+footer_text: Built with love by @cnix
+color_theme: auto
 # Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+# theme: minima
+theme: type-on-strap
+post_navigation: true
+paginate: 10
+paginate_path: "posts/page:num"
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
