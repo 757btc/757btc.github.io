@@ -10,4 +10,4 @@ We are focused exclusively on the transformative power of Bitcoin, not crypto, a
 
 Join us at 757btc.org to connect with fellow Bitcoin enthusiasts, stay informed about the latest trends and innovations in the space, and contribute to the growing dialogue on the future of money. Together, we're building a community that embraces the potential of Freedom Tech and fosters a deeper understanding of the decentralized revolution. We proudly support Bitcoin and welcome enthusiasts who share our passion for this groundbreaking digital currency.
 
-![Sic semper tyrannis](/assets/img/757btc-seal.jpg)
+![Sic semper tyrannis](assets/img/757btc-seal.jpg)
