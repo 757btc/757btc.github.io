@@ -28,7 +28,7 @@ color_theme: auto
 # Build settings
 markdown: kramdown
 # theme: minima
-theme: type-on-strap
+remote_theme: type-on-strap
 post_navigation: true
 paginate: 10
 paginate_path: "posts/page:num"
