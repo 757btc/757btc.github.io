@@ -38,4 +38,16 @@ Ecash Wallets (Cashu)
 - <a href="https://www.enuts.cash/" target="_blank">Enuts</a>
 - <a href="https://www.minibits.cash/" target="_blank">Minibits</a>
 
+Hardware Wallets
+- <a href="https://store.coinkite.com/store" target="_blank">Coinkite Bitcoin Hardware</a>
+
+Bitcoin Tools
+- <a href="https://mempool.space" target="_blank">Mempool Space Block Explorer</a>
+
+Notes and Other Stuff Transmitted By Relay (NOSTR)
+- <a href="https://nostr.com/" target="_blank">Nostr information</a>
+- <a href="https://nostr.build" target="_blank">Service to share media over Nostr</a>
+- <a href="https://nostr.watch/relays/find" target="_blank">Service to check status of Nostr relays</a>
+
+
 ![Sic semper tyrannis](assets/img/757btc-seal.jpg)
