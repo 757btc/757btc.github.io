@@ -4,15 +4,15 @@ title:  "October 2024 Meetup Happened"
 date:   2024-10-15 18:33:00 -0400
 categories: meetups
 ---
-It was a beautiful evening. Children ran amuk the streets with their parents in Olde Towne Portsmouth, Virginia. Aparently there was a Trick or Treat  event. We liked orange and that's for Bitcoin. Sorry children, no candy here.
+It was a beautiful evening. Children ran amok the streets with their parents in Olde Towne Portsmouth, Virginia. Apparently there was a Trick or Treat  event. We liked orange and that's for Bitcoin. Sorry children, no candy here.
 
 We all met at Mile Zero Marine. The turnout showed at one point 13 bodies. Children, parents, young men, medium men and old men. The host, Mile Zero Marine, provided snacks, beverages and miscellaneous places to sit. It wasn't long before we were greeting a new guest from out of town. We had a visitor from New Jersey. The word was getting out.
 
-The main subject covered was Bitcoin wallets, seed phrases and a great [Mempool.space](https://mempool.spcace) presentation by our host. Being able to visualize what is going on with Bitcoin is very helpful. Our host and another Lightning Node runner discussed and demonstrated LNBits with the ability to host wallets for others without the concern of liquidity.
+The main subject covered was Bitcoin wallets, seed phrases and a great [Mempool.space](https://mempool.spcace) presentation by our host. Being able to visualize what is going on with Bitcoin is helpful. Our host and another Lightning Node runner discussed and demonstrated LNBits with the ability to host wallets for others without the concern of liquidity.
 
 We had a straggling member show up and it was worth the wait.  [Bitcoin.Rocks](https://bitcoin.rocks/) stickers and signs were presented to the team. We knew we had a mission.
 
-We exchanged Signal, Telelgram, NOSTR and other such informations. With the spooks identified we all went home armed with new knowledge, handshakes, propaganda and in spiration.
+We exchanged Signal, Telelgram, NOSTR and other such information. With the spooks identified we all went home armed with new knowledge, handshakes, propaganda and inspiration.
 
 Topics:
 
