@@ -28,6 +28,7 @@ Topics:
 10. Layer 2 Bitcoin
 11. Liquid
  
+
 *Next Meetup November 9th 2024 - 5:00 PM at [Pixels
 Pints and Bytes](https://pixelspintsandbytes.com/), 2117
 Colonial Avenue, Norfolk, VA 23517*
