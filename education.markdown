@@ -6,7 +6,7 @@ permalink: /education/
 
 ## My First Bitcoin
 ##### My First Bitcoin PDF Slides - Chapters 1-3:
-My First Bitcoin educational series created by the Bitcoin friendly plebs in El Salvador. It’s an open source program focused on teaching people about Bitcoin, money and saving your wealth. These are the slides presented at the [2024 November meetup Recap](/meetups/2024/11/15/November-Meetup-Recap.html)
+My First Bitcoin educational series created by the Bitcoin friendly plebs in El Salvador. It’s an open source program focused on teaching people about Bitcoin, money and saving your wealth. These are the [slides](assets/education/ES_Bitcoin_Diploma.pdf)presented at the [2024 November meetup Recap](/meetups/2024/11/15/November-Meetup-Recap.html)
 - <a href="/assets/education/ES_Bitcoin_Diploma.pdf" target="_blank">My First Bitcoin</a>
 
 ## Education Series
