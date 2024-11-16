@@ -9,7 +9,7 @@ categories: meetups
 
 We had our November meetup at Pixels, Pints and Bytes in Norfolk, Virginia.  The meetup turned out very well with parents, children and grandparents!  All of us with the desire to have freedom of speech, freedom to save and spend our hard earned stacks of sats [^1] the way we want to.
 
-We were very fortunate to have the **My First Bitcoin** educational series created by the Bitcoin friendly plebs [^2] in El Salvador. It's an open source program focused on teaching people about Bitcoin, money and saving your wealth. The presentation [slides](assets/education/ES_Bitcoin_Diploma.pdf) was put together by a Father and 10 year old daughter team. We were able to use the large screen at Pixels so that was very helpful. It was an excellent presentation and both children and adults were able to learn and discuss the topics intelligently. For the next meetup we will recap this presentation and continue into further topics.
+We were very fortunate to have the **My First Bitcoin** educational series created by the Bitcoin friendly plebs [^2] in El Salvador. It's an open source program focused on teaching people about Bitcoin, money and saving your wealth. The presentation [slides](/assets/education/ES_Bitcoin_Diploma.pdf) were put together by a Father and 10 year old daughter team. We were able to use the large screen at Pixels so that was very helpful. It was an excellent presentation and both children and adults were able to learn and discuss the topics intelligently. For the next meetup we will recap this presentation and continue into further topics.
 
 ![757BTC.org-Logo-w-NOSTR](/assets/img/Meetup-20241109-Presentation.png)
 
