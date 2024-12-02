@@ -4,6 +4,16 @@ title:  "Meetup Saturday December 14 @ 5:30 PM"
 date:   2024-12-01 00:33:00 -0400
 categories: meetups
 ---
+
+**Meetup December 14th 2024 - 5:30 PM at [Pixels
+Pints and Bytes](https://pixelspintsandbytes.com/), 2117
+Colonial Avenue, Norfolk, VA 23517**
+
+---
+
+<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4594.664241759693!2d-76.29323777489812!3d36.86974891846846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ba99407e23dcbd%3A0x83e39756932fc58b!2sPIXELS%20Pints%20%26%20Bytes!5e1!3m2!1sen!2sus!4v1733165743157!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
+
+---
 ![Bitcoin Santa - Stolen from https://www.bitcoin-gr.org/happy-xmas-eve-bitcoin/](/assets/img/Bitcoin_Santa.jpeg)
 
 Ho Ho Ho and Happy Holidays! This time of year is getting colder but Bitcoin is heating up the atmosphere with sobering numbers of HODLers[^1] increasing their net worth by simply stacking sats.[^2] Are you stacking sats, too?  Why not? There is no better time than the present to get into Bitcoin and start dollar cost averaging yourself out of debt!
