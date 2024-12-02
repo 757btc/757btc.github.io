@@ -30,16 +30,6 @@ Christmas is upon us, Hanukkah is also starting on the 25th of December this yea
 
 At 757BTC.org we meet every 2nd Saturday of the month. Our next meetup is at Pixels, Pints and Bytes on Decemebr 14, 2024 at 5:30 PM. Come out and join us plebs[^8] as we discuss the world of Bitcoin, NOSTR[^9] and freedom technology. 
 
-**Meetup December 14th 2024 - 5:30 PM at [Pixels
-Pints and Bytes](https://pixelspintsandbytes.com/), 2117
-Colonial Avenue, Norfolk, VA 23517**
-
----
-
-<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.866001771546!2d-76.2919205!3d36.86962609999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ba9838fa496cf9%3A0x3ce3a68337200643!2s2117%20Colonial%20Ave%2C%20Norfolk%2C%20VA%2023517!5e0!3m2!1sen!2sus!4v1730601688830!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
-
----
-
 ## Topics Covered in our last November 2024 meetup: ##
 
 1. [My First Bitcoin](https://myfirstbitcoin.io/) Open Source Bitcoin Education
