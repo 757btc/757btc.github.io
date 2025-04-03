@@ -1,4 +1,4 @@
-# Web page for the Bitcoin meetup in Hampton Roads Virginia area code 757
+# Web page for the Bitcoin meetup in Hampton Roads Virginia area code 757 [https://757btc.org/]
 
 ## To setup and build locally
 - install Ruby
