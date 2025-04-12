@@ -29,4 +29,8 @@ Personal digital security is crucial as we discuss digital money. This slide dec
 Bitcoin development is happning at a rapid pace. Part of this is because of the concept of layered technologies. This slide deck presents the different layers of Bitcoin technology and starts the conversation of pro's and con's of how to choose which layer to use when you need it.
 - <a href="/assets/education/ES_BitcoinLayers.pdf" target="_blank">Bitcoin Layers</a>
 
+##### Lightning Workshop Slides:
+Lightning helps make Bitcoin even more functional giving us the ability to transact faster and cheaper for small amounts. There are tradeoffs to lightning and this workshop will help bring to light those tradeoffs.
+- <a href="/assets/education/ES_Lightning.pdf" target="_blank">Lightning Workshop</a>
+
 ![Sic semper tyrannis](/assets/img/757circlenostr02-alpha.png)
