@@ -23,7 +23,6 @@ github_username:  757btc
 header_feature_image: assets/img/mermaid-bg.png
 header_feature_image_responsive: true
 header_text: Collaborating and Educating on Bitcoin, Nostr and Freedom Tech in Hampton Roads Virginia
-footer_text: made with &#x1F9E1; by <a href="https://primal.net/p/npub1txh7f5wew26f56mps7l2gavgj0c9dnjj946a25ta7amgc6eqku6qwmwx64">@cnix</a>
 color_theme: auto
 # Build settings
 markdown: kramdown
