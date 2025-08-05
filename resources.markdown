@@ -26,7 +26,7 @@ Custody Wallets
 
 Self Custody onchain Wallets
 - <a href="https://bluewallet.io/features/" target="_blank">Blue wallet (general purpose hot)</a>
-- <a href="https://samouraiwallet.com/" target="_blank">Samourai (privacy focused)</a>
+- <a href="https://ashigaru.rs/" target="_blank">Ashigaru (privacy focused)</a>
 
 Self Custody Layer 2 (lightning, liquid) Wallets
 - <a href="https://phoenix.acinq.co/" target="_blank">Phoenix</a>
