@@ -17,6 +17,10 @@ My First Bitcoin (MFB) educational series created by the Bitcoin friendly plebs 
 Slide deck of the various topics we plan to build education series for. These topics could end up as presentations, workshops, or just general discussion.
 - <a href="/assets/education/ES_topics.pdf" target="_blank">Education Topics</a>
 
+##### Bitcoin Fundamentals:
+Slide deck on how freedom of speech is a core fundamental to the security and viability of Bitcoin
+- <a href="/assets/education/bitcoin_fundamentals_freeSpeech.pdf" targe="_blank">Bitcoin Fundamentals Freedom of Speech</a>
+
 ##### The Case for Bitcoin PDF Slides:
 This slide deck is used to present Bitcoin to those that are not aware of the value proposition of bitcoin. The intention is to facilitate a high level discussion on the important aspects and use cases of Bitcoin.
 - <a href="/assets/education/ES_CaseForBitcoin.pdf" target="_blank">The Case for Bitcoin</a>
