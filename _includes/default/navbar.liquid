@@ -1,0 +1,42 @@
+<header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        {% if site.avatar %}
+		<a href="{{ '/' | relative_url }}">
+			<img alt="logo img" class="avatar" src="{{ site.avatar | relative_url }}" loading="lazy"/>
+		</a>
+        {% endif %}
+        <a class="site-title" aria-label="{{ site.title }}" href="{{ '/' | relative_url }}">
+        {{ site.title }}
+		</a>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fas fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        {% assign emptyArray = '' | split: '' %}
+        {% assign menus = site.data.menu | default: emptyArray | sort: 'position' %}
+        {% for item in menus %}
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="{{ item.title }}" title="{{ item.title }}" href="{{ item.url | relative_url }}">
+                    {% if item.icon %} <i class="navbar-icon fas {{ item.icon }}" aria-hidden="true"></i>{% endif %}
+                    <span class="navbar-label {% if item.icon %}navbar-label-with-icon{% endif%}">{{ item.title }}</span>
+                </a>
+            </li>
+        {% endfor %}
+
+        {% if site.color_theme == 'auto' %}
+        <li class="separator"> | </li>
+        <li><a id="theme-toggle" title="{{ page.title }} " aria-label="{{ page.title }}" onclick="themeToggle()"></a></li>
+        {% endif %}
+    </ul>
+
+	</nav>
+</header>

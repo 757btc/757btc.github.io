@@ -1,0 +1,52 @@
+---
+---
+
+/* Custom CSS to show navbar text alongside icons */
+nav ul li a span.navbar-label,
+nav ul li a span.navbar-label-with-icon,
+.site-header nav ul li a span.navbar-label,
+.site-header nav ul li a span.navbar-label-with-icon {
+    display: inline !important;
+    margin-left: 0.5em !important;
+    visibility: visible !important;
+}
+
+nav ul li a i.navbar-icon,
+.site-header nav ul li a i.navbar-icon {
+    display: inline !important;
+    visibility: visible !important;
+}
+
+/* Darker text color for form inputs and textareas */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    color: #222 !important;
+}
+
+/* Darker placeholder text */
+input::placeholder,
+textarea::placeholder {
+    color: #666 !important;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    /* Reduce padding on smaller screens */
+    div[style*="padding: 1.5em"] {
+        padding: 1em !important;
+    }
+
+    div[style*="padding: 2em"] {
+        padding: 1em !important;
+    }
+
+    /* Ensure form fields are full width */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        font-size: 16px !important; /* Prevents iOS zoom on focus */
+    }
+}
