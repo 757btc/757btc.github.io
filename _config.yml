@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: 757btc.org (Meet every 2nd Saturday of the month)
-email: 757btc@gmail.com #not a legit email lol
+email: 757btc.org@proton.me
 description: >- # this means to ignore newlines until "baseurl:"
   Collaborating and educating on Bitcoin, Nostr and Freedom Tech in Hampton Roads Virginia. We announce our meetings at the beginning of each month and meet on the 2nd Saturday of each month.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -24,6 +24,8 @@ header_feature_image: assets/img/mermaid-bg.png
 header_feature_image_responsive: true
 header_text: Collaborating and Educating on Bitcoin, Nostr and Freedom Tech in Hampton Roads Virginia
 color_theme: auto
+external_css:
+  - /assets/css/custom.css
 # Build settings
 markdown: kramdown
 # theme: minima
