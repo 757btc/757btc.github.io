@@ -24,8 +24,6 @@ header_feature_image: assets/img/mermaid-bg.png
 header_feature_image_responsive: true
 header_text: Collaborating and Educating on Bitcoin, Nostr and Freedom Tech in Hampton Roads Virginia
 color_theme: auto
-external_css:
-  - /assets/css/custom.css
 # Build settings
 markdown: kramdown
 # theme: minima
