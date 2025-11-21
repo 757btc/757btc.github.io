@@ -17,10 +17,10 @@
   url: /resources/
   position: 4
 
-- title: Register
-  url: /register/
-  position: 5
+# - title: Register
+#   url: /register/
+#   position: 5
 
 - title: Contact
   url: /contact-us/
-  position: 6
+  position: 5

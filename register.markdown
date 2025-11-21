@@ -8,8 +8,9 @@ permalink: /register/
 
 <div class="market-event-info">
   <h3>Event Details</h3>
-  <p><strong>Date:</strong> Saturday, December 6, 2025</p>
-  <p><strong>Time:</strong> 11:00 AM - 3:00 PM</p>
+  <p><strong>Date:</strong> Saturday, December 13, 2025</p>
+  <p><strong>Time:</strong> 11:00 AM - 3:00 PM (vendors should arrive at 10)</p>
+  <p><strong>Location:</strong> <a href="https://beachmontessorichristianacademy.com" target="blank">Beach Montessori Christian Academy</a> - 1101 Eaglewood Dr, Virginia Beach, VA 23454</p>
 </div>
 
 <p class="market-intro">Register as a vendor for our Bitcoin market! This is an opportunity to sell your goods and services while accepting Bitcoin payments.</p>
@@ -115,6 +116,4 @@ permalink: /register/
 
 ---
 
-<div class="market-seal-container">
-  <img src="/assets/img/757btc-seal.jpg" alt="Sic semper tyrannis">
-</div>
+![Sic semper tyrannis](/assets/img/757circlenostr02-alpha.png)
