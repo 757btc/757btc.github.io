@@ -7,7 +7,7 @@ permalink: /thanks/
 <div id="thank-you-message">
   <h2>Thank You!</h2>
 
-  <p>Your vendor registration for the Bitcoin Market on <strong>Saturday, December 6, 2025</strong> has been successfully submitted.</p>
+  <p>Your vendor registration for the Bitcoin Market on <strong>Saturday, December 13, 2025</strong> has been successfully submitted.</p>
 
   <p>We'll review your application and get back to you shortly via email with more details about:</p>
 
