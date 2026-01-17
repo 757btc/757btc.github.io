@@ -77,6 +77,86 @@
     `;
   }
 
+  // Build mission objectives from JSON data - Compact checkbox style
+  function buildMissionObjectives(data) {
+    if (!data.meetups || !data.meetups.list) return;
+    
+    const missionsList = document.getElementById('missions-list');
+    if (!missionsList) return;
+    
+    // Get current date info
+    const now = new Date();
+    const currentDay = now.getDate();
+    const currentMonth = now.getMonth();
+    const currentYear = now.getFullYear();
+    
+    // Helper function to check if meetup has passed this month
+    function hasMeetupPassed(meetup) {
+      const frequency = meetup.frequency.toLowerCase();
+      
+      // Calculate the target day of month for this meetup
+      let targetDay = null;
+      
+      if (frequency.includes('first wednesday')) {
+        targetDay = getNthDayOfMonth(currentYear, currentMonth, 3, 1); // Wednesday = 3, 1st occurrence
+      } else if (frequency.includes('first saturday')) {
+        targetDay = getNthDayOfMonth(currentYear, currentMonth, 6, 1); // Saturday = 6, 1st occurrence
+      } else if (frequency.includes('second saturday')) {
+        targetDay = getNthDayOfMonth(currentYear, currentMonth, 6, 2); // Saturday = 6, 2nd occurrence
+      } else if (frequency.includes('third thursday')) {
+        targetDay = getNthDayOfMonth(currentYear, currentMonth, 4, 3); // Thursday = 4, 3rd occurrence
+      }
+      
+      // Check if we've passed this meetup day
+      return targetDay !== null && currentDay > targetDay;
+    }
+    
+    // Helper to get the Nth occurrence of a weekday in a month
+    function getNthDayOfMonth(year, month, dayOfWeek, occurrence) {
+      let count = 0;
+      let day = 1;
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      
+      while (day <= daysInMonth) {
+        const date = new Date(year, month, day);
+        if (date.getDay() === dayOfWeek) {
+          count++;
+          if (count === occurrence) {
+            return day;
+          }
+        }
+        day++;
+      }
+      return null;
+    }
+    
+    // Create compact format with smart checkboxes
+    const missionsHTML = data.meetups.list.map((meetup, index) => {
+      // Create short label (e.g., "1ST WED - CHICHOS")
+      const freqShort = meetup.frequency.toUpperCase();
+      const locShort = meetup.location.split(' ')[0].toUpperCase(); // First word of location
+      const label = `${freqShort} - ${locShort}`;
+      
+      // Check if this meetup has passed
+      const completed = hasMeetupPassed(meetup);
+      const completedClass = completed ? 'completed' : '';
+      
+      return `
+        <li class="hud-mission-item ${completedClass}" data-mission="${index}">
+          <div class="hud-mission-content">
+            <div class="hud-mission-info">
+              <div class="hud-mission-label">${label}</div>
+            </div>
+            <div class="hud-mission-time">${meetup.time}</div>
+          </div>
+        </li>
+      `;
+    }).join('');
+    
+    missionsList.innerHTML = missionsHTML;
+    console.log('✓ Mission objectives loaded (compact style with date checking)');
+  }
+
   // Function to update block height
   async function updateBlockHeight() {
     if (!config || !config.bitcoinStats.enabled) return;
@@ -92,17 +172,21 @@
       }
       
       const height = await response.text();
-      const blockElement = document.querySelector('.stat-value.block-height');
-      if (blockElement) {
-        blockElement.textContent = parseInt(height).toLocaleString();
-      }
+      const formattedHeight = parseInt(height).toLocaleString();
+      
+      // Update all block height elements (sidebar and HUD)
+      const blockElements = document.querySelectorAll('.stat-value.block-height, .hud-stat-value.block-height');
+      blockElements.forEach(el => {
+        el.textContent = formattedHeight;
+        el.classList.add('updating');
+        setTimeout(() => el.classList.remove('updating'), 500);
+      });
+      
       console.log('✓ Block height updated:', height);
     } catch (error) {
       console.error('✗ Error fetching block height:', error);
-      const blockElement = document.querySelector('.stat-value.block-height');
-      if (blockElement) {
-        blockElement.textContent = 'Error';
-      }
+      const blockElements = document.querySelectorAll('.stat-value.block-height, .hud-stat-value.block-height');
+      blockElements.forEach(el => el.textContent = 'Error');
     }
   }
 
@@ -121,17 +205,22 @@
       }
       
       const prices = await response.json();
-      const priceElement = document.querySelector('.stat-value.btc-price');
-      if (priceElement && prices.USD) {
-        priceElement.textContent = `$${parseInt(prices.USD).toLocaleString()}`;
+      if (prices.USD) {
+        const formattedPrice = `$${parseInt(prices.USD).toLocaleString()}`;
+        
+        // Update all price elements (sidebar and HUD)
+        const priceElements = document.querySelectorAll('.stat-value.btc-price, .hud-stat-value.btc-price');
+        priceElements.forEach(el => {
+          el.textContent = formattedPrice;
+          el.classList.add('updating');
+          setTimeout(() => el.classList.remove('updating'), 500);
+        });
       }
       console.log('✓ Price updated:', prices.USD);
     } catch (error) {
       console.error('✗ Error fetching price:', error);
-      const priceElement = document.querySelector('.stat-value.btc-price');
-      if (priceElement) {
-        priceElement.textContent = 'Error';
-      }
+      const priceElements = document.querySelectorAll('.stat-value.btc-price, .hud-stat-value.btc-price');
+      priceElements.forEach(el => el.textContent = 'Error');
     }
   }
 
@@ -150,18 +239,21 @@
       }
       
       const fees = await response.json();
-      const feeElement = document.querySelector('.stat-value.fee-rate');
-      if (feeElement) {
-        const feeDisplay = `${fees.fastestFee}/${fees.halfHourFee}/${fees.hourFee} sat/vB`;
-        feeElement.textContent = feeDisplay;
-      }
+      const feeDisplay = `${fees.fastestFee}/${fees.halfHourFee}/${fees.hourFee} sat/vB`;
+      
+      // Update all fee elements (sidebar and HUD)
+      const feeElements = document.querySelectorAll('.stat-value.fee-rate, .hud-stat-value.fee-rate');
+      feeElements.forEach(el => {
+        el.textContent = feeDisplay;
+        el.classList.add('updating');
+        setTimeout(() => el.classList.remove('updating'), 500);
+      });
+      
       console.log('✓ Fees updated:', fees);
     } catch (error) {
       console.error('✗ Error fetching fees:', error);
-      const feeElement = document.querySelector('.stat-value.fee-rate');
-      if (feeElement) {
-        feeElement.textContent = 'Error';
-      }
+      const feeElements = document.querySelectorAll('.stat-value.fee-rate, .hud-stat-value.fee-rate');
+      feeElements.forEach(el => el.textContent = 'Error');
     }
   }
 
@@ -210,12 +302,15 @@
       return;
     }
 
-    // Build and inject HTML
+    // Build and inject HTML for sidebar (if present)
     const posterElement = document.getElementById('dailydrop-poster');
     if (posterElement) {
       posterElement.innerHTML = buildPosterHTML(data);
       console.log('✓ Poster HTML built');
     }
+    
+    // Build mission objectives for HUD (if present)
+    buildMissionObjectives(data);
 
     // Start updating Bitcoin data if enabled
     if (data.bitcoinStats.enabled) {

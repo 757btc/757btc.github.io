@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<div class="home">
+    <!-- Hero image with HUD overlay -->
+    <div class="hero-container">
+        {% if site.header_feature_image %}
+        <img src="{{ site.header_feature_image | relative_url }}" alt="Bitcoin Cypherpunk Hero" class="hero-image">
+        {% else %}
+        <!-- Fallback to your uploaded image or default -->
+        <img src="{{ '/assets/img/bitcoin-cypherpunk-hero.png' | relative_url }}" alt="Bitcoin Cypherpunk Hero" class="hero-image">
+        {% endif %}
+        
+        <!-- HUD Overlay with live Bitcoin data -->
+        <div class="bitcoin-hud-overlay">
+            <!-- Corner targeting brackets -->
+            <div class="hud-corner-bracket top-left"></div>
+            <div class="hud-corner-bracket top-right"></div>
+            <div class="hud-corner-bracket bottom-left"></div>
+            <div class="hud-corner-bracket bottom-right"></div>
+            
+            <!-- Grid overlay -->
+            <div class="hud-grid-overlay"></div>
+            
+            <!-- Scanning line -->
+            <div class="hud-scan-line"></div>
+            
+            <!-- Top-right stats panel -->
+            <div class="hud-stats-corner" id="hud-stats">
+                <div class="hud-stat-row">
+                    <span class="hud-stat-label">Block</span>
+                    <span class="hud-stat-value block-height">Loading...</span>
+                </div>
+                <div class="hud-stat-row">
+                    <span class="hud-stat-label">Price</span>
+                    <span class="hud-stat-value btc-price">Loading...</span>
+                </div>
+                <div class="hud-stat-row">
+                    <span class="hud-stat-label">Fees</span>
+                    <span class="hud-stat-value fee-rate">Loading...</span>
+                </div>
+            </div>
+            
+            <!-- Floating data points -->
+            <div class="hud-floating-data block-height-float">
+                <div style="font-size: 0.75em; opacity: 0.7;">BLOCK HEIGHT</div>
+                <div class="hud-stat-value block-height" style="font-size: 1.2em; margin-top: 3px;">Loading...</div>
+            </div>
+            
+            <div class="hud-floating-data btc-price-float">
+                <div style="font-size: 0.75em; opacity: 0.7;">BTC/USD</div>
+                <div class="hud-stat-value btc-price" style="font-size: 1.2em; margin-top: 3px;">Loading...</div>
+            </div>
+            
+            <div class="hud-floating-data fee-rate-float">
+                <div style="font-size: 0.75em; opacity: 0.7;">MEMPOOL FEES</div>
+                <div class="hud-stat-value fee-rate" style="font-size: 1.2em; margin-top: 3px;">Loading...</div>
+            </div>
+            
+            <!-- Bottom status bar -->
+            <div class="hud-status-bar">
+                <span class="hud-timestamp" id="hud-timestamp">System Online</span>
+                <span style="color: #00dd00;">CONNECTED TO MEMPOOL.757BTC.ORG</span>
+            </div>
+            
+            <!-- Mission Objectives Panel - Bottom Right -->
+            <div class="hud-missions-panel">
+                <div class="hud-missions-header">Mission Objectives</div>
+                <ul class="hud-missions-list" id="missions-list">
+                    <!-- Missions will be loaded from JSON -->
+                    <li class="hud-mission-item">
+                        <div class="hud-mission-content">
+                            <div class="hud-mission-frequency">Loading...</div>
+                            <div class="hud-mission-location">Please wait...</div>
+                            <div class="hud-mission-time">--:--</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Blog posts below the hero -->
+    <div style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        {% capture _blog %}{% include blog/blog.liquid %}{% endcapture %}
+        {{ _blog | split: " " | join: " "}}
+    </div>
+</div>

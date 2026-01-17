@@ -1,0 +1,576 @@
+/* Bitcoin HUD Overlay for Hero Image */
+/* Place this in your home layout or as a separate component */
+
+/* Override Type-on-Strap theme's .content padding for full-width hero */
+body > .content {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.hero-container {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 700px;
+  min-height: 700px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive heights */
+@media (min-width: 1200px) {
+  .hero-container {
+    height: 800px;
+    min-height: 800px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    height: 600px;
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    height: 500px;
+    min-height: 500px;
+  }
+}
+
+/* HUD Overlay Container */
+.bitcoin-hud-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+  z-index: 10;
+}
+
+/* Top-center-left stats - Like a game HUD - Above the bird */
+.hud-stats-corner {
+  position: absolute;
+  top: 0%;
+  left: 24%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #00ff41;
+  border-radius: 0;
+  padding: 15px 20px;
+  box-shadow: 
+    0 0 20px rgba(0, 255, 65, 0.4),
+    inset 0 0 20px rgba(0, 255, 65, 0.05);
+  animation: hudSlideIn 0.5s ease-out;
+  max-width: 300px;
+  min-width: 250px;
+}
+
+@keyframes hudSlideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hud-stats-corner::before {
+  content: "[ LIVE NETWORK DATA ]";
+  display: block;
+  color: #00ff41;
+  font-size: 0.7em;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.7);
+}
+
+.hud-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  color: #00ff41;
+  font-size: 0.9em;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+}
+
+.hud-stat-row:last-child {
+  border-bottom: none;
+}
+
+.hud-stat-label {
+  color: #00dd00;
+  margin-right: 15px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 1px;
+}
+
+.hud-stat-label::before {
+  content: "▸ ";
+  color: #00ff41;
+}
+
+.hud-stat-value {
+  color: #00ff41;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+  animation: dataFlicker 3s ease-in-out infinite;
+}
+
+@keyframes dataFlicker {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+  }
+}
+
+/* Floating data points scattered around the image - HIDDEN */
+.hud-floating-data {
+  display: none !important; /* Hidden - using main stats panel only */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hud-floating-data.block-height-float {
+  top: 18%;
+  left: 12%;
+  animation-delay: 0s;
+}
+
+.hud-floating-data.btc-price-float {
+  top: 45%;
+  right: 12%;
+  transform: translateY(-50%);
+  animation-delay: 0.5s;
+}
+
+.hud-floating-data.fee-rate-float {
+  bottom: 25%;
+  left: 12%;
+  animation-delay: 1s;
+}
+
+.hud-floating-data::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 1px solid #00ff41;
+  opacity: 0.3;
+  animation: pulse-border 2s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+/* Scanning lines effect across the image */
+.hud-scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(0, 255, 65, 0.8), 
+    transparent);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+  animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+  from {
+    top: -10px;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+/* Grid overlay like AR/targeting system */
+.hud-grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+/* Corner brackets like targeting reticle */
+.hud-corner-bracket {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #00ff41;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.hud-corner-bracket.top-left {
+  top: 5%;
+  left: 8%;
+  border-right: none;
+  border-bottom: none;
+}
+
+.hud-corner-bracket.top-right {
+  top: 5%;
+  right: 8%;
+  border-left: none;
+  border-bottom: none;
+}
+
+.hud-corner-bracket.bottom-left {
+  bottom: 5%;
+  left: 8%;
+  border-right: none;
+  border-top: none;
+}
+
+.hud-corner-bracket.bottom-right {
+  bottom: 5%;
+  right: 8%;
+  border-left: none;
+  border-top: none;
+}
+
+/* Bottom status bar like a terminal prompt */
+.hud-status-bar {
+  display: none; /* Hidden to keep all elements within image bounds */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-top: 2px solid #00ff41;
+  padding: 10px 20px;
+  font-size: 0.8em;
+  color: #00ff41;
+  box-shadow: 0 -5px 20px rgba(0, 255, 65, 0.2);
+}
+
+.hud-status-bar::before {
+  content: "root@757btc:~$ ";
+  color: #00ff41;
+  margin-right: 10px;
+}
+
+.hud-timestamp {
+  color: #00dd00;
+  font-size: 0.9em;
+}
+
+.hud-timestamp::before {
+  content: "[ ";
+}
+
+.hud-timestamp::after {
+  content: " ]";
+}
+
+/* Mission Objectives Panel - Bottom Right */
+/* Mission Objectives Panel - Bottom Right - Compact Style */
+.hud-missions-panel {
+  position: absolute;
+  bottom: 8%;
+  right: 15%;
+  background: rgba(0, 0, 0, 0.95);
+  border: 3px double #00ff41;
+  padding: 0;
+  width: 420px;
+  max-width: 30%;
+  max-height: 350px;
+  overflow-y: auto;
+  box-shadow: 
+    0 0 30px rgba(0, 255, 65, 0.4),
+    inset 0 0 30px rgba(0, 255, 65, 0.05);
+  animation: missionSlideIn 0.7s ease-out;
+  font-size: 0.95em;
+}
+
+@keyframes missionSlideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hud-missions-header {
+  background: #00ff41;
+  color: #000000;
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 0.95em;
+  border-bottom: 2px solid #00ff41;
+}
+
+.hud-missions-header::before {
+  content: "[ ";
+}
+
+.hud-missions-header::after {
+  content: " ]";
+}
+
+.hud-missions-list {
+  padding: 15px 12px;
+  list-style: none;
+  margin: 0;
+}
+
+.hud-mission-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  background: rgba(0, 40, 0, 0.3);
+  border-left: 3px solid #00ff41;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hud-mission-item:last-child {
+  margin-bottom: 0;
+}
+
+.hud-mission-item:hover {
+  background: rgba(0, 60, 0, 0.5);
+  border-left-width: 5px;
+  padding-left: 14px;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+/* Checkbox style marker */
+.hud-mission-item::before {
+  content: "[ ]";
+  color: #00ff41;
+  font-size: 1em;
+  margin-right: 10px;
+  font-weight: bold;
+  animation: checkboxBlink 2s ease-in-out infinite;
+}
+
+@keyframes checkboxBlink {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 5px #00ff41;
+  }
+  50% {
+    opacity: 0.5;
+    text-shadow: none;
+  }
+}
+
+.hud-mission-item.completed::before {
+  content: "[✓]";
+  color: #00ff41;
+  text-shadow: 0 0 10px #00ff41;
+  animation: none;
+}
+
+.hud-mission-content {
+  flex: 1;
+  color: #00ff41;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hud-mission-info {
+  flex: 1;
+}
+
+.hud-mission-label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  color: #00ff41;
+}
+
+.hud-mission-frequency {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  color: #00ff41;
+}
+
+.hud-mission-location {
+  display: none; /* Hidden in compact view */
+}
+
+.hud-mission-time {
+  font-size: 1em;
+  color: #00ff41;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+  margin-left: 15px;
+  white-space: nowrap;
+}
+
+/* Pulsing border effect */
+.hud-missions-panel::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 1px solid #00ff41;
+  opacity: 0;
+  animation: borderPulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes borderPulse {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+}
+
+/* Responsive - simplify on mobile */
+@media (max-width: 768px) {
+  .hero-container {
+    height: 500px; /* Smaller on mobile */
+  }
+  
+  .hud-floating-data {
+    display: none;
+  }
+  
+  .hud-stats-corner {
+    top: 10px;
+    right: 10px;
+    padding: 8px 10px;
+    font-size: 0.75em;
+  }
+  
+  .hud-status-bar {
+    font-size: 0.65em;
+    padding: 6px 10px;
+  }
+  
+  .hud-status-bar::before {
+    content: "$ ";
+  }
+  
+  .hud-corner-bracket {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .hud-missions-panel {
+    bottom: 40px;
+    right: 10px;
+    width: 260px;
+    max-height: 280px;
+    font-size: 0.8em;
+  }
+  
+  .hud-missions-header {
+    padding: 6px 10px;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+  }
+  
+  .hud-missions-list {
+    padding: 8px;
+  }
+  
+  .hud-mission-item {
+    padding: 8px 6px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    height: 400px; /* Even smaller on tiny screens */
+  }
+  
+  .hud-missions-panel {
+    width: 220px;
+    max-height: 240px;
+    font-size: 0.75em;
+  }
+}
+
+/* Data update animation */
+.hud-stat-value.updating {
+  animation: valueUpdate 0.5s ease-out;
+}
+
+@keyframes valueUpdate {
+  0% {
+    color: #00ff41;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+  }
+  50% {
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(0, 255, 65, 1);
+    transform: scale(1.1);
+  }
+  100% {
+    color: #00ff41;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+    transform: scale(1);
+  }
+}
