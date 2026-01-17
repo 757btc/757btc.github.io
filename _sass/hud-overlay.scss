@@ -11,16 +11,12 @@ body > .content {
 
 .hero-container {
   position: relative;
-  width: 100vw; /* Full viewport width */
+  width: 100%; /* Match parent width (not viewport) */
   height: 700px;
   min-height: 700px;
   overflow: hidden;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
 }
 
 .hero-image {
@@ -59,7 +55,7 @@ body > .content {
   left: 0;
   right: 0;
   bottom: 0;
-  pointer-events: none;
+  // pointer-events: none;
   font-family: 'Share Tech Mono', 'Courier New', monospace;
   z-index: 10;
 }
@@ -67,8 +63,8 @@ body > .content {
 /* Top-center-left stats - Like a game HUD - Above the bird */
 .hud-stats-corner {
   position: absolute;
-  top: 0%;
-  left: 24%;
+  top: 12%;
+  left: 42%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.85);
   border: 2px solid #00ff41;
@@ -238,7 +234,7 @@ body > .content {
     linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
-  pointer-events: none;
+  //pointer-events: none;
 }
 
 /* Corner brackets like targeting reticle */
@@ -278,9 +274,8 @@ body > .content {
   border-top: none;
 }
 
-/* Bottom status bar like a terminal prompt */
+/* Bottom status bar like a terminal prompt - Matches image width */
 .hud-status-bar {
-  display: none; /* Hidden to keep all elements within image bounds */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -288,9 +283,25 @@ body > .content {
   background: rgba(0, 0, 0, 0.9);
   border-top: 2px solid #00ff41;
   padding: 10px 20px;
-  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85em;
   color: #00ff41;
   box-shadow: 0 -5px 20px rgba(0, 255, 65, 0.2);
+  z-index: 100;
+}
+
+.hud-status-bar a {
+  color: #00ff41;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hud-status-bar a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ff41;
+  text-decoration: underline;
 }
 
 .hud-status-bar::before {
@@ -317,7 +328,7 @@ body > .content {
 .hud-missions-panel {
   position: absolute;
   bottom: 8%;
-  right: 15%;
+  right: 8%;
   background: rgba(0, 0, 0, 0.95);
   border: 3px double #00ff41;
   padding: 0;
@@ -330,6 +341,33 @@ body > .content {
     inset 0 0 30px rgba(0, 255, 65, 0.05);
   animation: missionSlideIn 0.7s ease-out;
   font-size: 0.95em;
+}
+
+/* Custom scrollbar styling for mission objectives */
+.hud-missions-panel::-webkit-scrollbar {
+  width: 12px;
+}
+
+.hud-missions-panel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);
+  border-left: 1px solid #00ff41;
+}
+
+.hud-missions-panel::-webkit-scrollbar-thumb {
+  background: #00ff41;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.hud-missions-panel::-webkit-scrollbar-thumb:hover {
+  background: #00ff88;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.8);
+}
+
+/* Firefox scrollbar */
+.hud-missions-panel {
+  scrollbar-width: thin;
+  scrollbar-color: #00ff41 rgba(0, 0, 0, 0.5);
 }
 
 @keyframes missionSlideIn {
