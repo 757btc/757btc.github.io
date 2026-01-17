@@ -63,8 +63,8 @@ body > .content {
 /* Top-center-left stats - Like a game HUD - Above the bird */
 .hud-stats-corner {
   position: absolute;
-  top: 12%;
-  left: 42%;
+  top: 0%;
+  left: 24%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.85);
   border: 2px solid #00ff41;
@@ -328,7 +328,7 @@ body > .content {
 .hud-missions-panel {
   position: absolute;
   bottom: 8%;
-  right: 8%;
+  right: 16%;
   background: rgba(0, 0, 0, 0.95);
   border: 3px double #00ff41;
   padding: 0;
