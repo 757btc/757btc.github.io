@@ -1,0 +1,58 @@
+{
+  "header": "◇◇◇◇ DailyDrop757 ◇◇◇◇",
+  "bitcoinStats": {
+    "enabled": true,
+    "apiUrls": {
+      "blockHeight": "https://mempool.757btc.org/api/blocks/tip/height",
+      "price": "https://mempool.757btc.org/api/v1/prices",
+      "fees": "https://mempool.757btc.org/api/v1/fees/recommended"
+    },
+    "updateInterval": 60000
+  },
+  "meetups": {
+    "title": "Four meetups in 757 each month:",
+    "list": [
+      {
+        "frequency": "First Wednesday",
+        "schedule": "of every month",
+        "location": "Chichos in VB",
+        "time": "18:30"
+      },
+      {
+        "frequency": "First Saturday",
+        "schedule": "morning",
+        "location": "Wegmans in Town Center VB",
+        "time": "08:00"
+      },
+      {
+        "frequency": "Second Saturday",
+        "schedule": "",
+        "location": "Mile Zero Marine in Portsmouth",
+        "time": "14:00"
+      },
+      {
+        "frequency": "Third Thursday",
+        "schedule": "",
+        "location": "Smartmouth Pilot House in VB",
+        "time": "18:30"
+      }
+    ]
+  },
+  "links": [
+    {
+      "label": "Keep up with the latest:",
+      "url": "https://757btc.org",
+      "text": "757btc.org"
+    },
+    {
+      "label": "Monitor Bitcoin state:",
+      "url": "https://mempool.757btc.org",
+      "text": "mempool.757btc.org"
+    },
+    {
+      "label": "Need a lightning wallet:",
+      "url": "https://757btc.app",
+      "text": "757btc.app"
+    }
+  ]
+}
