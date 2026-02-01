@@ -50,4 +50,4 @@ Hardware Wallets
 - <a href="https://nostr.watch/relays/find" target="_blank">Service to check status of Nostr relays</a>
 
 
-![Sic semper tyrannis](assets/img/757btc-seal.jpg)
+![Sic semper tyrannis](assets/img/757circlenostr02-alpha.png)
