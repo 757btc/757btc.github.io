@@ -1,5 +1,6 @@
 ---
 layout: post
+author: cnix
 title:  "Inagural Meetup - Friday February 9 @ 6PM"
 date:   2024-02-08 10:54:35 -0500
 categories: meetups

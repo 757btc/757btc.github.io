@@ -1,5 +1,6 @@
 ---
 layout: post
+author: cnix
 title:  "Halving Meetup - Saturday April 20 @ 4:30PM"
 date:   2024-04-18 14:00:00 -0400
 categories: meetups
