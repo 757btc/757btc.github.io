@@ -1,5 +1,6 @@
 ---
 layout: post
+author: cnix
 title:  "Meetup Saturday January 11, 2025 @ 5:00 PM"
 date:   2025-01-01 21:21:21 -0500
 categories: meetups

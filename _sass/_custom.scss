@@ -241,3 +241,6 @@ textarea::placeholder {
         font-size: 16px !important; /* Prevents iOS zoom on focus */
     }
 }
+div.author-info p.meta {
+	text-transform: none;
+}
