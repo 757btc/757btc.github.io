@@ -1,5 +1,6 @@
 ---
 layout: post
+author: cnix
 title:  "July Meetup - Saturday July 13 @ 5:00PM"
 date:   2024-07-6 09:33:00 -0400
 categories: meetups
