@@ -19,6 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Collaborating and educating on Bitcoin, Nostr and Freedom Tech in Hampton Roads Virginia. We announce our meetings at the beginning of each month and meet on the 2nd Saturday of each month.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.757btc.org" # the base hostname & protocol for your site, e.g. http://example.com
+avatar: assets/img/757circlenostr02-alpha.png
+color_image: assets/img/lineart.png
 github_username:  757btc
 header_feature_image: assets/img/mermaid-bg.png
 header_feature_image_responsive: true
