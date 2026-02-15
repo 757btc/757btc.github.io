@@ -10,7 +10,7 @@
     "updateInterval": 60000
   },
   "meetups": {
-    "title": "Four meetups in 757 each month:",
+    "title": "Five meetups in 757 each month:",
     "list": [
       {
         "frequency": "First Wednesday",
@@ -23,6 +23,12 @@
         "schedule": "morning",
         "location": "Wegmans in Town Center VB",
         "time": "08:00"
+      },
+      {
+        "frequency": "Second Tuesday",
+        "schedule": "",
+        "location": "Capstan Bar Brewing Co. in Hampton",
+        "time": "18:30"
       },
       {
         "frequency": "Second Saturday",
