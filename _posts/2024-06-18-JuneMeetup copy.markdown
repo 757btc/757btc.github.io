@@ -1,5 +1,6 @@
 ---
 layout: post
+author: theGig
 title:  "June Meetup - Saturday June 15 @ 4:00PM"
 date:   2024-06-15 08:00:00 -0400
 categories: meetups

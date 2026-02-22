@@ -1,5 +1,6 @@
 ---
 layout: post
+author: theGig
 title:  "Second Meetup - Saturday March 23 @ 1:30PM"
 date:   2024-03-21 10:54:35 -0500
 categories: meetups
