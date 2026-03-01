@@ -1,5 +1,6 @@
 ---
 layout: post
+author: theGig
 title:  "August Meetup - Saturday August 10 @ 5:00PM"
 date:   2024-07-6 09:33:00 -0400
 categories: meetups

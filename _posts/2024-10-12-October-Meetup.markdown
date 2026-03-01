@@ -1,5 +1,6 @@
 ---
 layout: post
+author: theGig
 title:  "October Meetup - Saturday October 12 @ 5:00PM"
 date:   2024-10-6 09:33:00 -0400
 categories: meetups
