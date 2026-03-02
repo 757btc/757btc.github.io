@@ -1,26 +1,18 @@
 # Navigation menu items
 # Each item requires: title, url, and position
 
-- title: Home
-  url: /
-  position: 1
-
 - title: About
   url: /about/
-  position: 2
+  position: 1
 
 - title: Education
   url: /education/
-  position: 3
+  position: 2
 
 - title: Resources
   url: /resources/
-  position: 4
-
-# - title: Register
-#   url: /register/
-#   position: 5
+  position: 3
 
 - title: Contact
   url: /contact-us/
-  position: 5
+  position: 4
