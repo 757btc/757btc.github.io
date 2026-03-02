@@ -37,11 +37,11 @@ paginate_path: "posts/page:num"
 plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
 
 # Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
+exclude:
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/
