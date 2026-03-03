@@ -27,7 +27,11 @@ header_feature_image_responsive: true
 header_text: Collaborating and Educating on Bitcoin, Nostr and Freedom Tech in Hampton Roads Virginia
 color_theme: auto
 excerpt: true
-mempool_api: https://mempool.757btc.org/api
+cypherpunk:
+  hero_image: assets/img/cypherpunk_mermaid.png
+  hero_position: center 30%
+  crt: true          # set false to disable scan lines
+  mempool_api: https://mempool.757btc.org/api
 
 # Build settings
 markdown: kramdown
