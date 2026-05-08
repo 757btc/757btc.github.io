@@ -10,14 +10,8 @@
     "updateInterval": 60000
   },
   "meetups": {
-    "title": "Five meetups in 757 each month:",
+    "title": "Four meetups in 757 each month:",
     "list": [
-      {
-        "frequency": "First Wednesday",
-        "schedule": "of every month",
-        "location": "Chichos in VB",
-        "time": "18:30"
-      },
       {
         "frequency": "First Saturday",
         "schedule": "morning",
