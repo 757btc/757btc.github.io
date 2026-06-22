@@ -1,0 +1,152 @@
+/* Terminal Overlay — output/game display only (input lives in HUD status bar) */
+
+#terminal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#terminal-overlay.active {
+  display: flex;
+}
+
+body.terminal-open {
+  overflow: hidden !important;
+  position: fixed !important;
+  inset: 0 !important;
+  touch-action: none;
+}
+
+.terminal-window {
+  width: 100%;
+  max-width: 700px;
+  height: 80vh;
+  max-height: 600px;
+  background: #0a0a0a;
+  border: 1px solid #00ff41;
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.2), inset 0 0 60px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.3);
+  background: rgba(0, 255, 65, 0.05);
+  flex-shrink: 0;
+}
+
+.terminal-title {
+  color: #00ff41;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
+}
+
+.terminal-close {
+  color: #00aa00;
+  cursor: pointer;
+  font-size: 0.85em;
+  padding: 2px 6px;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.terminal-close:hover {
+  color: #00ff41;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+}
+
+.terminal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 14px;
+  scrollbar-width: thin;
+  scrollbar-color: #00aa00 #0a0a0a;
+  min-height: 0;
+}
+
+.terminal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #00aa00;
+  border-radius: 0;
+}
+
+.terminal-line {
+  color: #00ff41;
+  font-size: 0.85em;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Breakout container */
+#breakout-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 0;
+}
+
+#breakout-canvas {
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #terminal-overlay {
+    padding: 0;
+  }
+
+  .terminal-window {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border: none;
+    box-sizing: border-box;
+  }
+
+  .terminal-line {
+    font-size: 0.8em;
+  }
+
+  #breakout-container {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-line {
+    font-size: 0.75em;
+    line-height: 1.5;
+  }
+
+  .terminal-body {
+    padding: 8px 10px;
+  }
+}
