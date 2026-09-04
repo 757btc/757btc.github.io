@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{% include hud.html %}
+
+<div class="container">
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+    <li class="post-item">
+      <div class="post-meta">
+        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        {% if post.author and site.data.authors[post.author] %}
+        <span class="post-author-inline"> // {{ site.data.authors[post.author].name }}</span>
+        {% endif %}
+      </div>
+      <a href="{{ post.url | relative_url }}" class="post-title-link">{{ post.title }}</a>
+      {% if post.excerpt and site.excerpt %}
+      <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+  <nav class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&lt;&lt; newer</a>
+    {% endif %}
+    <span class="current">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">older &gt;&gt;</a>
+    {% endif %}
+  </nav>
+  {% endif %}
+</div>
+
+<script src="{{ '/assets/js/bitcoin-hud.js' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/assets/css/terminal.css' | relative_url }}">
+<script src="{{ '/assets/js/terminal.js' | relative_url }}"></script>
