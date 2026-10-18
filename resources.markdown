@@ -26,7 +26,7 @@ Custody Wallets
 
 Self Custody onchain Wallets
 - <a href="https://bluewallet.io/features/" target="_blank">Blue wallet (general purpose hot)</a>
-- <a href="https://ashigaru.rs/" target="_blank">Ashigaru (privacy focused)</a>
+- <a href="https://bullbitcoin.com/" target="_blank">Bull Bitcoin Wallet</a>
 
 Self Custody Layer 2 (lightning, liquid) Wallets
 - <a href="https://phoenix.acinq.co/" target="_blank">Phoenix</a>
