@@ -39,7 +39,8 @@ Ecash Wallets (Cashu)
 - <a href="https://www.minibits.cash/" target="_blank">Minibits</a>
 
 Hardware Wallets
-- <a href="https://seedsigner.com/" target="_blank">Seed Signer Hardware Wallet</a>
+- <a href="https://seedsigner.com/" target="_blank">Seed Signer Hardware Wallet (DIY)</a>
+- <a href="https://blockstream.com/jade/" target="_blank">Blockstream Jade</a>
 
 ## Bitcoin Tools
 - <a href="https://mempool.space" target="_blank">Mempool Space Block Explorer</a>
