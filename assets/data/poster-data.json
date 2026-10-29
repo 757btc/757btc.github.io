@@ -3,9 +3,9 @@
   "bitcoinStats": {
     "enabled": true,
     "apiUrls": {
-      "blockHeight": "https://mempool.757btc.org/api/blocks/tip/height",
-      "price": "https://mempool.757btc.org/api/v1/prices",
-      "fees": "https://mempool.757btc.org/api/v1/fees/recommended"
+      "blockHeight": "https://mempool.space/api/blocks/tip/height",
+      "price": "https://mempool.space/api/v1/prices",
+      "fees": "https://mempool.space/api/v1/fees/recommended"
     },
     "updateInterval": 60000
   },
