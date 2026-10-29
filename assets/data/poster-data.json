@@ -40,19 +40,14 @@
   },
   "links": [
     {
+      "label": "Tidewater Bitcoin Meetups News and Information"
+      "url": "https://tidewaterbitcoin.com",
+      "text": "Tidewater Bitcoin Website"
+    },
+    {
       "label": "Keep up with the latest:",
       "url": "https://757btc.org",
       "text": "757btc.org"
-    },
-    {
-      "label": "Monitor Bitcoin state:",
-      "url": "https://mempool.757btc.org",
-      "text": "mempool.757btc.org"
-    },
-    {
-      "label": "Need a lightning wallet:",
-      "url": "https://757btc.app",
-      "text": "757btc.app"
     }
   ]
 }
