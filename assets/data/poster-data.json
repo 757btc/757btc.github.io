@@ -40,14 +40,14 @@
   },
   "links": [
     {
-      "label": "Tidewater Bitcoin Meetups News and Information",
+      "label": "tidewaterbitcoin.com",
       "url": "https://tidewaterbitcoin.com",
-      "text": "Tidewater Bitcoin Website"
+      "text": "Tidewater Bitcoin Meetups News and Information"
     },
     {
-      "label": "Original Website for the 757btc",
+      "label": "757btc.org",
       "url": "https://757btc.org",
-      "text": "757btc.org"
+      "text": "Original Website for the 757btc"
     }
   ]
 }
